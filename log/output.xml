@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-01-08T14:12:13.178377" rpa="false" schemaversion="5">
+<suite id="s1" name="IFrameHandling" source="C:\Users\GENIUS\IdeaProjects\robot-framework-example\test_cases\IFrameHandling.robot">
+<test id="s1-t1" name="To Perform To handle IFrame" line="9">
+<kw name="Lunch Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-08T14:12:13.387009" level="INFO">Opening browser 'chrome' to base url 'https://seleniumhq.github.io/selenium/docs/api/java/index'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-08T14:12:13.387009" elapsed="1.409138"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-08T14:12:14.796147" elapsed="0.026832"/>
+</kw>
+<status status="PASS" start="2026-01-08T14:12:13.386003" elapsed="1.436976"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-01-08T14:12:14.823975" level="INFO">Clicking link 'org.openqa.selenium.bidi.webextension'.</msg>
+<arg>org.openqa.selenium.bidi.webextension</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-08T14:12:14.822979" elapsed="0.137651"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-08T14:12:15.961502" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-08T14:12:14.961140" elapsed="1.000362"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-01-08T14:12:15.962593" level="INFO">Clicking link 'ExtensionBase64Encoded'.</msg>
+<arg>ExtensionBase64Encoded</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-08T14:12:15.962593" elapsed="0.164751"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-08T14:12:17.128885" level="INFO">Slept 1 second.</msg>
+<arg>1second</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-08T14:12:16.128350" elapsed="1.000535"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-01-08T14:12:17.129907" level="INFO">Clicking link 'xpath=//a[@class="member-name-link"]'.</msg>
+<arg>xpath=//a[@class="member-name-link"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-08T14:12:17.128885" elapsed="0.076626"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-08T14:20:37.206908" level="INFO">Slept 8 minutes 20 seconds.</msg>
+<arg>500</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-08T14:12:17.205511" elapsed="500.001397"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-01-08T14:20:37.206908" elapsed="6.182493"/>
+</kw>
+<status status="PASS" start="2026-01-08T14:12:13.385008" elapsed="510.004393"/>
+</test>
+<status status="PASS" start="2026-01-08T14:12:13.181400" elapsed="510.208001"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="IFrameHandling" id="s1" pass="1" fail="0" skip="0">IFrameHandling</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
+</kw>
+<kw name="Unselect From List By Label" owner="SeleniumLibrary">
+<arg>selenium_commands</arg>
+<arg>Browser Commands</arg>
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2026-01-08T14:14:09.825609" elapsed="0.000000"/>
+</kw>
+<kw name="Get Selenium Timeout" owner="SeleniumLibrary">
+<var>${time}</var>
+<doc>Gets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-01-08T14:14:09.825609" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-01-08T14:14:09.825609" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-08T14:13:57.716536" elapsed="12.110578">Text 'Practice Form' did not appear in 10 seconds.</status>
+</test>
+<status status="FAIL" start="2026-01-08T14:13:57.522955" elapsed="12.304159"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TimeInRobot" id="s1" pass="0" fail="1" skip="0">TimeInRobot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
