@@ -2,6 +2,7 @@
 Library  DatabaseLibrary
 Library  OperatingSystem
 Library    RPA.RobotLogListener
+Library    RequestsLibrary
 
 Suite Setup     Connect To Database     pymysql      ${dbName}       ${uername}      ${password}     ${host}     ${port}
 Suite Teardown  Disconnect From Database
@@ -59,3 +60,16 @@ Delete Record From Table
     ${output}=   Execute SQL String     delete from person where id=104
     log to console   ${output}
     Should Be Equal As Strings  ${output}   None
+
+Verify name exist
+    ${verifynow}=    Query    select * from person where name='andou'
+    Should Not Be Empty    ${verifynow}
+
+addproduct verify
+   ${create}=   Set Variable   insert into person(name) values('alexandre')
+   Execute Sql String    ${create}
+   ${verify}=   query   select * from person where name='alexandre'
+   Should Not Be Empty    ${verify}
+
+
+
