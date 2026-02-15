@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 *** Variables ***
 ${browser}      chrome
 ${url}      http://testautomationpractice.blogspot.com/
-
+#Handle
 *** Test Cases ***
 To Perform Select Option with Drop Down list
 
