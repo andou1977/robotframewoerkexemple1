@@ -1,5 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library    OperatingSystem
+Library    Collections
 
 *** Test Cases ***
 For Loop Execution in Robot
@@ -35,3 +37,12 @@ For Loop with Exit
        log to console  ${i}
        exit for loop if    ${i}==3
     END
+
+
+For Andou Loop
+   ${myname}=   Get Length   andou
+   Should Be Equal As Integers     ${myname}    5
+    @{items}      create list  andou  peter  alexandra  michael
+   FOR    ${andou}    IN    ${items}
+       List Should Contain Value    ${items}    alexandra
+   END

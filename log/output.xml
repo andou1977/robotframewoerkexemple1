@@ -1,70 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-01-13T13:07:06.730347" rpa="false" schemaversion="5">
-<suite id="s1" name="DatabaseTestingInRobot" source="C:\Users\GENIUS\IdeaProjects\robot-framework-example\test_cases\DatabaseTestingInRobot.robot">
-<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
-<msg time="2026-01-13T13:07:07.026113" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-01-13T13:07:07.028111" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-01-13T13:07:07.039657" level="INFO">Connect to DB using : pymysql.connect(db='pythonselenium', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
-<arg>pymysql</arg>
-<arg>${dbName}</arg>
-<arg>${uername}</arg>
-<arg>${password}</arg>
-<arg>${host}</arg>
-<arg>${port}</arg>
-<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
-Along with listed commonly used arguments (`db_name`, `db_host` etc.)
-you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.026113" elapsed="0.019546"/>
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-02-17T11:52:05.112159" rpa="false" schemaversion="5">
+<suite id="s1" name="SetupTearDown" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\SetupTearDown.robot">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.357358" elapsed="0.000000"/>
 </kw>
-<test id="s1-t1" name="addproduct verify" line="68">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-13T13:07:07.046659" level="INFO">${create} = insert into person(name) values('alexandre')</msg>
-<var>${create}</var>
-<arg>insert into person(name) values('alexandre')</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.046659" elapsed="0.000000"/>
+<test id="s1-t1" name="TC1" line="13">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Login</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.358390" elapsed="0.000000"/>
 </kw>
-<kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2026-01-13T13:07:07.047658" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;insert into person(name) values('alexandre')&lt;/code&gt;</msg>
-<msg time="2026-01-13T13:07:07.047658" level="INFO">Commit the transaction</msg>
-<arg>${create}</arg>
-<doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.047658" elapsed="0.000999"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Home page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.358390" elapsed="0.000000"/>
 </kw>
-<kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-01-13T13:07:07.048657" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person where name='alexandre'&lt;/code&gt;</msg>
-<msg time="2026-01-13T13:07:07.049669" level="INFO">Commit the transaction</msg>
-<msg time="2026-01-13T13:07:07.049669" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 4 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;7&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-01-13T13:07:07.050657" level="INFO">${verify} = ((4, 'alexandre'), (5, 'alexandre'), (6, 'alexandre'), (7, 'alexandre'))</msg>
-<var>${verify}</var>
-<arg>select * from person where name='alexandre'</arg>
-<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
-The type of row values depends on the database module -
-usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.048657" elapsed="0.002000"/>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.358390" elapsed="0.000000"/>
 </kw>
-<kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-01-13T13:07:07.050657" level="INFO">Length is 4.</msg>
-<arg>${verify}</arg>
-<doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.050657" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2026-01-13T13:07:07.046659" elapsed="0.003998"/>
+<status status="PASS" start="2026-02-17T11:52:05.357358" elapsed="0.001032"/>
 </test>
-<kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
-<doc>Disconnects from the database.</doc>
-<status status="PASS" start="2026-01-13T13:07:07.051657" elapsed="0.000000"/>
+<test id="s1-t2" name="TC2" line="15">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Login</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.359434" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-13T13:07:06.732348" elapsed="0.319309"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>About us</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.359434" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.359434" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-17T11:52:05.359434" elapsed="0.000000"/>
+</test>
+<test id="s1-t3" name="TC3" line="17">
+<kw name="Log To Console" owner="BuiltIn" type="SETUP">
+<arg>Login</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.360443" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Contact Us</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.360443" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>logout</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.360443" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-17T11:52:05.360443" elapsed="0.000988"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Close Browser</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:52:05.361431" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-17T11:52:05.115153" elapsed="0.246278"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="DatabaseTestingInRobot" id="s1" pass="1" fail="0" skip="0">DatabaseTestingInRobot</stat>
+<stat name="SetupTearDown" id="s1" pass="3" fail="0" skip="0">SetupTearDown</stat>
 </suite>
 </statistics>
 <errors>

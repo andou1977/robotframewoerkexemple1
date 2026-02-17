@@ -1,145 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-02-15T11:38:21.974089" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-02-17T11:56:54.770461" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Cases" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases">
 <suite id="s1-s1" name="AlertHandling" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\AlertHandling.robot">
 <test id="s1-s1-t1" name="To Perform Select Option with Drop Down list" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:22.176181" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-02-17T11:56:55.071263" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:22.176181" elapsed="2.714014"/>
+<status status="PASS" start="2026-02-17T11:56:55.071263" elapsed="2.695663"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:24.891194" elapsed="0.035658"/>
+<status status="PASS" start="2026-02-17T11:56:57.766926" elapsed="0.037007"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:22.176181" elapsed="2.750671"/>
+<status status="PASS" start="2026-02-17T11:56:55.070184" elapsed="2.733749"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=start-date</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:57.803933" elapsed="0.048525"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=start-date</arg>
+<arg>01/02/2026</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:57.852458" elapsed="0.056003"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>id=end-date</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:57.908461" elapsed="0.037996"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=end-date</arg>
+<arg>16/02/2026</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:57.947456" elapsed="0.074004"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:24.927858" level="INFO">Clicking element 'xpath://*[@id="HTML9"]/div[1]/button'.</msg>
+<msg time="2026-02-17T11:56:58.022460" level="INFO">Clicking element 'css:.submit-btn'.</msg>
+<arg>css:.submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:58.022460" elapsed="0.097000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-17T11:56:58.141459" level="INFO">${thetext} = You selected a range of 334 days.</msg>
+<var>${thetext}</var>
+<arg>id=result</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:56:58.119460" elapsed="0.021999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${thetext}</arg>
+<arg>You selected a range of 334 days.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-17T11:56:58.142457" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://*[@id="HTML9"]/div[1]/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-02-17T11:56:58.142457" elapsed="0.282094"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-17T11:56:58.425550" level="INFO">Clicking element 'xpath://*[@id="HTML9"]/div[1]/button'.</msg>
 <arg>xpath://*[@id="HTML9"]/div[1]/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:38:24.926852" elapsed="0.073043"/>
+<status status="PASS" start="2026-02-17T11:56:58.425550" elapsed="0.097732"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:38:27.002092" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-02-17T11:57:00.524877" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:38:25.001003" elapsed="2.001089"/>
+<status status="PASS" start="2026-02-17T11:56:58.524275" elapsed="2.000602"/>
 </kw>
 <kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:27.003102" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2026-02-17T11:57:00.525902" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <arg>I am an alert box!</arg>
 <doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2026-02-15T11:38:27.002092" elapsed="0.006045"/>
+<status status="PASS" start="2026-02-17T11:57:00.525902" elapsed="0.009231"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:38:27.008137" elapsed="2.133739"/>
+<status status="PASS" start="2026-02-17T11:57:00.536140" elapsed="2.181871"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:22.175165" elapsed="6.967707"/>
+<status status="PASS" start="2026-02-17T11:56:55.069276" elapsed="7.648735"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:21.991815" elapsed="7.151563"/>
+<status status="PASS" start="2026-02-17T11:56:54.800277" elapsed="7.918718"/>
 </suite>
 <suite id="s1-s2" name="BrowserNavigation" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\BrowserNavigation.robot">
 <test id="s1-s2-t1" name="Handle Browser Windows" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:29.147387" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
+<msg time="2026-02-17T11:57:02.723999" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
 <arg>http://demo.automationtesting.in/Windows.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:29.147387" elapsed="2.551633"/>
+<status status="PASS" start="2026-02-17T11:57:02.723999" elapsed="2.819524"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.699020" elapsed="0.052135"/>
+<status status="PASS" start="2026-02-17T11:57:05.543523" elapsed="0.045998"/>
 </kw>
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:31.756678" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
+<msg time="2026-02-17T11:57:05.595528" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
 <var>${location}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.751155" elapsed="0.005523"/>
+<status status="PASS" start="2026-02-17T11:57:05.589521" elapsed="0.006007"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${location}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.757675" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:05.595528" elapsed="0.000995"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:31.758682" level="INFO">Opening url 'https://www.selenium.dev/selenium/docs/api/java/index'</msg>
+<msg time="2026-02-17T11:57:05.597523" level="INFO">Opening url 'https://www.selenium.dev/selenium/docs/api/java/index'</msg>
 <arg>https://www.selenium.dev/selenium/docs/api/java/index</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.757675" elapsed="0.137315"/>
+<status status="PASS" start="2026-02-17T11:57:05.597523" elapsed="0.709610"/>
 </kw>
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:31.901989" level="INFO">${location} = https://www.selenium.dev/selenium/docs/api/java/index</msg>
+<msg time="2026-02-17T11:57:06.316844" level="INFO">${location} = https://www.selenium.dev/selenium/docs/api/java/index</msg>
 <var>${location}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.894990" elapsed="0.006999"/>
+<status status="PASS" start="2026-02-17T11:57:06.308146" elapsed="0.008698"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${location}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.901989" elapsed="0.001013"/>
+<status status="PASS" start="2026-02-17T11:57:06.316844" elapsed="0.000999"/>
 </kw>
 <kw name="Go Back" owner="SeleniumLibrary">
 <doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.903002" elapsed="0.018749"/>
+<status status="PASS" start="2026-02-17T11:57:06.317843" elapsed="0.026000"/>
 </kw>
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:31.927919" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
+<msg time="2026-02-17T11:57:06.353136" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
 <var>${location}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.921751" elapsed="0.006168"/>
+<status status="PASS" start="2026-02-17T11:57:06.345177" elapsed="0.007959"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${location}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.927919" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:06.354600" elapsed="0.000000"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:38:31.928919" elapsed="2.135553"/>
+<status status="PASS" start="2026-02-17T11:57:06.355613" elapsed="2.121228"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:29.146395" elapsed="4.919091"/>
+<status status="PASS" start="2026-02-17T11:57:02.723015" elapsed="5.754827"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:29.144384" elapsed="4.922095"/>
+<status status="PASS" start="2026-02-17T11:57:02.720020" elapsed="5.758901"/>
 </suite>
 <suite id="s1-s3" name="CountOfLinksOnPage" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\CountOfLinksOnPage.robot">
 <test id="s1-s3-t1" name="Get All Links form Website" line="10">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:34.132185" level="INFO">Opening browser 'chrome' to base url 'http://www.practiceselenium.com/practice-form.html'.</msg>
+<msg time="2026-02-17T11:57:08.543983" level="INFO">Opening browser 'chrome' to base url 'http://www.practiceselenium.com/practice-form.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:34.131187" elapsed="1.580003"/>
+<status status="PASS" start="2026-02-17T11:57:08.543983" elapsed="1.947362"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:35.711190" elapsed="0.096821"/>
+<status status="PASS" start="2026-02-17T11:57:10.491345" elapsed="0.036714"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:34.130188" elapsed="1.677823"/>
+<status status="PASS" start="2026-02-17T11:57:08.542959" elapsed="1.985100"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:35.857225" level="INFO">${LinkCount} = 0</msg>
+<msg time="2026-02-17T11:57:10.540577" level="INFO">${LinkCount} = 0</msg>
 <var>${LinkCount}</var>
 <arg>xpath://a</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:38:35.808011" elapsed="0.049214"/>
+<status status="PASS" start="2026-02-17T11:57:10.528568" elapsed="0.012009"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${LinkCount}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:35.858234" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:10.540577" elapsed="0.000000"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-15T11:38:35.859225" level="INFO">@{items} = [ ]</msg>
+<msg time="2026-02-17T11:57:10.541585" level="INFO">@{items} = [ ]</msg>
 <var>@{items}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-15T11:38:35.859225" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:10.541585" elapsed="0.000000"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
@@ -147,34 +193,34 @@
 <var>${linkText}</var>
 <arg>xpath:(//a)[${i}]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-02-15T11:38:35.860230" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-02-17T11:57:10.542578" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${linkText}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-02-15T11:38:35.860230" elapsed="0.000000"/>
+<status status="NOT RUN" start="2026-02-17T11:57:10.542578" elapsed="0.000000"/>
 </kw>
 <var name="${i}"/>
-<status status="NOT RUN" start="2026-02-15T11:38:35.859225" elapsed="0.001005"/>
+<status status="NOT RUN" start="2026-02-17T11:57:10.542578" elapsed="0.000000"/>
 </iter>
 <var>${i}</var>
 <value>1</value>
 <value>${LinkCount}+1</value>
-<status status="NOT RUN" start="2026-02-15T11:38:35.859225" elapsed="0.001005"/>
+<status status="NOT RUN" start="2026-02-17T11:57:10.541585" elapsed="0.000993"/>
 </for>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:38:35.861229" elapsed="2.285685"/>
+<status status="PASS" start="2026-02-17T11:57:10.544579" elapsed="2.127413"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:34.117112" elapsed="4.030466"/>
+<status status="PASS" start="2026-02-17T11:57:08.542959" elapsed="4.130019"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:34.068478" elapsed="4.079100"/>
+<status status="PASS" start="2026-02-17T11:57:08.479839" elapsed="4.195136"/>
 </suite>
 <suite id="s1-s4" name="DatabaseTestingInRobot" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\DatabaseTestingInRobot.robot">
 <kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
-<msg time="2026-02-15T11:38:38.396541" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-02-15T11:38:38.396541" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-02-15T11:38:38.417378" level="INFO">Connect to DB using : pymysql.connect(db='pythonselenium', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
+<msg time="2026-02-17T11:57:14.389276" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-02-17T11:57:14.389276" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-02-17T11:57:14.421743" level="INFO">Connect to DB using : pymysql.connect(db='pythonselenium', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
 <arg>pymysql</arg>
 <arg>${dbName}</arg>
 <arg>${uername}</arg>
@@ -184,405 +230,450 @@
 <doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
 Along with listed commonly used arguments (`db_name`, `db_host` etc.)
 you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.396541" elapsed="0.048816"/>
+<status status="PASS" start="2026-02-17T11:57:14.389276" elapsed="0.061389"/>
 </kw>
 <test id="s1-s4-t1" name="Check Person Table Exists" line="39">
 <kw name="Table Must Exist" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.446378" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM information_schema.tables WHERE table_name='person'&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.450373" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.450373" level="INFO">Retrieved 1 rows</msg>
-<msg time="2026-02-15T11:38:38.451371" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_CATALOG&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_SCHEMA&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_NAME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_TYPE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;ENGINE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;VERSION&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;ROW_FORMAT&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_ROWS&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;AVG_ROW_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;DATA_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;MAX_DATA_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;INDEX_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;DATA_FREE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;AUTO_INCREMENT&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CREATE_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;UPDATE_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CHECK_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_COLLATION&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CHECKSUM&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CREATE_OPTIONS&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_COMMENT&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;def&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;pythonselenium&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;person&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;BASE TABLE&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;MyISAM&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;10&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Dynamic&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;21&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;248&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;281474976710655&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2048&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;120&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;15&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-01-06 14:50:11&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-02-15 11:35:38&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;utf8mb4_0900_ai_ci&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.452756" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT * FROM information_schema.tables WHERE table_name='person'&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.512771" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.513771" level="INFO">Retrieved 1 rows</msg>
+<msg time="2026-02-17T11:57:14.513771" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_CATALOG&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_SCHEMA&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_NAME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_TYPE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;ENGINE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;VERSION&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;ROW_FORMAT&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_ROWS&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;AVG_ROW_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;DATA_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;MAX_DATA_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;INDEX_LENGTH&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;DATA_FREE&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;AUTO_INCREMENT&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CREATE_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;UPDATE_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CHECK_TIME&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_COLLATION&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CHECKSUM&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;CREATE_OPTIONS&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;TABLE_COMMENT&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;def&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;pythonselenium&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;person&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;BASE TABLE&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;MyISAM&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;10&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Dynamic&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;8&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;21&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;248&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;281474976710655&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2048&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;80&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;17&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-01-06 14:50:11&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-02-15 11:56:07&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;utf8mb4_0900_ai_ci&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;None&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
 <arg>person</arg>
 <doc>Check if the table with `table_name` exists in the database.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.446378" elapsed="0.004993"/>
+<status status="PASS" start="2026-02-17T11:57:14.451726" elapsed="0.062045"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.445357" elapsed="0.006014"/>
+<status status="PASS" start="2026-02-17T11:57:14.450665" elapsed="0.064105"/>
 </test>
 <test id="s1-s4-t2" name="Verfiy Row Count Is Zero" line="41">
 <kw name="Row Count Is 0" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.453892" level="WARN">Keyword 'DatabaseLibrary.Row Count Is 0' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+<msg time="2026-02-17T11:57:14.517753" level="WARN">Keyword 'DatabaseLibrary.Row Count Is 0' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</msg>
-<msg time="2026-02-15T11:38:38.454892" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select id from person where name='sdf'&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.455888" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.455888" level="INFO">Retrieved 0 rows</msg>
-<msg time="2026-02-15T11:38:38.455888" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 0 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.517753" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select id from person where name='sdf'&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.520762" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.520762" level="INFO">Retrieved 0 rows</msg>
+<msg time="2026-02-17T11:57:14.521754" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 0 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
 <arg>select id from person where name='sdf'</arg>
 <doc>*DEPRECATED* Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.453892" elapsed="0.003007"/>
+<status status="PASS" start="2026-02-17T11:57:14.517753" elapsed="0.004001"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.452878" elapsed="0.004021"/>
+<status status="PASS" start="2026-02-17T11:57:14.516778" elapsed="0.004976"/>
 </test>
 <test id="s1-s4-t3" name="Verfiy Row Count Is Equal to Some Value" line="44">
 <kw name="Row Count Is Equal To X" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.457898" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Equal To X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+<msg time="2026-02-17T11:57:14.524814" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Equal To X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</msg>
-<msg time="2026-02-15T11:38:38.460894" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select id from person where name='Rahul Moundekar'&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.461891" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.461891" level="INFO">Retrieved 1 rows</msg>
-<msg time="2026-02-15T11:38:38.461891" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.524814" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select id from person where name='Rahul Moundekar'&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.525795" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.526820" level="INFO">Retrieved 1 rows</msg>
+<msg time="2026-02-17T11:57:14.527802" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
 <arg>select id from person where name='Rahul Moundekar'</arg>
 <arg>1</arg>
 <doc>*DEPRECATED* Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.457898" elapsed="0.003993"/>
+<status status="PASS" start="2026-02-17T11:57:14.524814" elapsed="0.002988"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.457898" elapsed="0.005495"/>
+<status status="PASS" start="2026-02-17T11:57:14.522756" elapsed="0.006043"/>
 </test>
 <test id="s1-s4-t4" name="Update Record" line="47">
 <kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.464866" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;update person set name='Rahul Moundekar' where id=101&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.464866" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.466277" level="INFO">${output} = None</msg>
+<msg time="2026-02-17T11:57:14.531792" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;update person set name='Rahul Moundekar' where id=101&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.535809" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.536798" level="INFO">${output} = None</msg>
 <var>${output}</var>
 <arg>update person set name='Rahul Moundekar' where id=101</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.464866" elapsed="0.001411"/>
+<status status="PASS" start="2026-02-17T11:57:14.530792" elapsed="0.007018"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.466277" elapsed="0.001010"/>
+<status status="PASS" start="2026-02-17T11:57:14.537810" elapsed="0.001000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2026-02-15T11:38:38.467287" level="INFO">Argument types are:
+<msg time="2026-02-17T11:57:14.538810" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.467287" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.538810" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.463393" elapsed="0.004894"/>
+<status status="PASS" start="2026-02-17T11:57:14.530792" elapsed="0.009017"/>
 </test>
 <test id="s1-s4-t5" name="Select All Record from Table" line="52">
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.470285" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.471298" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.471298" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 6 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;andou&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Rahul Moundekar&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;peter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;14&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;13&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-02-15T11:38:38.471298" level="INFO">${data} = ((1, 'andou'), (2, 'Rahul Moundekar'), (3, 'peter'), (4, 'alexandre'), (14, 'alexandre'), (13, 'alexandre'))</msg>
+<msg time="2026-02-17T11:57:14.540808" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.542798" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.542798" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 8 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;andou&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Rahul Moundekar&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;peter&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;16&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;15&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;14&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;7&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;13&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.542798" level="INFO">${data} = ((1, 'andou'), (2, 'Rahul Moundekar'), (3, 'peter'), (4, 'alexandre'), (16, 'alexandre'), (15, 'alexandre'), (14, 'alexandre'), (13, 'alexandre'))</msg>
 <var>${data}</var>
 <arg>select * from person</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.470285" elapsed="0.001013"/>
+<status status="PASS" start="2026-02-17T11:57:14.540808" elapsed="0.001990"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.472809" elapsed="0.001012"/>
+<status status="PASS" start="2026-02-17T11:57:14.543810" elapsed="0.000999"/>
 </kw>
 <var name="${person}">(1, 'andou')</var>
-<status status="PASS" start="2026-02-15T11:38:38.472809" elapsed="0.001012"/>
+<status status="PASS" start="2026-02-17T11:57:14.543810" elapsed="0.000999"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.473821" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.544809" elapsed="0.000000"/>
 </kw>
 <var name="${person}">(2, 'Rahul Moundekar')</var>
-<status status="PASS" start="2026-02-15T11:38:38.473821" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.544809" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.544809" elapsed="0.000979"/>
 </kw>
 <var name="${person}">(3, 'peter')</var>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.544809" elapsed="0.000979"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.545788" elapsed="0.000561"/>
 </kw>
 <var name="${person}">(4, 'alexandre')</var>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.545788" elapsed="0.000561"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000985"/>
+<status status="PASS" start="2026-02-17T11:57:14.546349" elapsed="0.000560"/>
+</kw>
+<var name="${person}">(16, 'alexandre')</var>
+<status status="PASS" start="2026-02-17T11:57:14.546349" elapsed="0.000560"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${person}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:57:14.546909" elapsed="0.000551"/>
+</kw>
+<var name="${person}">(15, 'alexandre')</var>
+<status status="PASS" start="2026-02-17T11:57:14.546909" elapsed="0.000551"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${person}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-17T11:57:14.547460" elapsed="0.000000"/>
 </kw>
 <var name="${person}">(14, 'alexandre')</var>
-<status status="PASS" start="2026-02-15T11:38:38.474836" elapsed="0.000985"/>
+<status status="PASS" start="2026-02-17T11:57:14.547460" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${person}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.475821" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.547460" elapsed="0.000000"/>
 </kw>
 <var name="${person}">(13, 'alexandre')</var>
-<status status="PASS" start="2026-02-15T11:38:38.475821" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.547460" elapsed="0.001007"/>
 </iter>
 <var>${person}</var>
 <value>@{data}</value>
-<status status="PASS" start="2026-02-15T11:38:38.472809" elapsed="0.004010"/>
+<status status="PASS" start="2026-02-17T11:57:14.543810" elapsed="0.004657"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:38.469288" elapsed="0.007531"/>
+<status status="PASS" start="2026-02-17T11:57:14.540808" elapsed="0.007659"/>
 </test>
 <test id="s1-s4-t6" name="Delete Record From Table" line="59">
 <kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.477819" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;delete from person where id=104&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.478821" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.478821" level="INFO">${output} = None</msg>
+<msg time="2026-02-17T11:57:14.550574" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;delete from person where id=104&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.552470" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.552470" level="INFO">${output} = None</msg>
 <var>${output}</var>
 <arg>delete from person where id=104</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.477819" elapsed="0.001002"/>
+<status status="PASS" start="2026-02-17T11:57:14.549554" elapsed="0.002916"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${output}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.479821" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.552470" elapsed="0.001044"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2026-02-15T11:38:38.480826" level="INFO">Argument types are:
+<msg time="2026-02-17T11:57:14.553514" level="INFO">Argument types are:
 &lt;class 'NoneType'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${output}</arg>
 <arg>None</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.479821" elapsed="0.001005"/>
+<status status="PASS" start="2026-02-17T11:57:14.553514" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.477819" elapsed="0.003007"/>
+<status status="PASS" start="2026-02-17T11:57:14.549554" elapsed="0.004963"/>
 </test>
 <test id="s1-s4-t7" name="Verify name exist" line="64">
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.483202" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person where name='andou'&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.483735" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.483735" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;andou&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-02-15T11:38:38.483735" level="INFO">${verifynow} = ((1, 'andou'),)</msg>
+<msg time="2026-02-17T11:57:14.557478" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person where name='andou'&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.558473" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.558473" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;andou&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.558473" level="INFO">${verifynow} = ((1, 'andou'),)</msg>
 <var>${verifynow}</var>
 <arg>select * from person where name='andou'</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.482187" elapsed="0.001548"/>
+<status status="PASS" start="2026-02-17T11:57:14.557478" elapsed="0.000995"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-02-15T11:38:38.483735" level="INFO">Length is 1.</msg>
+<msg time="2026-02-17T11:57:14.558473" level="INFO">Length is 1.</msg>
 <arg>${verifynow}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.483735" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.558473" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.482187" elapsed="0.003069"/>
+<status status="PASS" start="2026-02-17T11:57:14.556481" elapsed="0.002986"/>
 </test>
 <test id="s1-s4-t8" name="addproduct verify" line="68">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-02-15T11:38:38.486277" level="INFO">${create} = insert into person(name) values('alexandre')</msg>
+<msg time="2026-02-17T11:57:14.560465" level="INFO">${create} = insert into person(name) values('alexandre')</msg>
 <var>${create}</var>
 <arg>insert into person(name) values('alexandre')</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.486277" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.560465" elapsed="0.000000"/>
 </kw>
 <kw name="Execute Sql String" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.486277" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;insert into person(name) values('alexandre')&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.487266" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.561468" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;insert into person(name) values('alexandre')&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.562465" level="INFO">Commit the transaction</msg>
 <arg>${create}</arg>
 <doc>Executes the ``sql_string`` as a single SQL command.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.486277" elapsed="0.000989"/>
+<status status="PASS" start="2026-02-17T11:57:14.561468" elapsed="0.000997"/>
 </kw>
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-02-15T11:38:38.487266" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person where name='alexandre'&lt;/code&gt;</msg>
-<msg time="2026-02-15T11:38:38.488266" level="INFO">Commit the transaction</msg>
-<msg time="2026-02-15T11:38:38.489267" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 4 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;15&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;14&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;13&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-02-15T11:38:38.489267" level="INFO">${verify} = ((4, 'alexandre'), (15, 'alexandre'), (14, 'alexandre'), (13, 'alexandre'))</msg>
+<msg time="2026-02-17T11:57:14.563466" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from person where name='alexandre'&lt;/code&gt;</msg>
+<msg time="2026-02-17T11:57:14.563962" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-17T11:57:14.563962" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 6 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;name&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;17&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;16&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;15&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;14&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;13&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;alexandre&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-17T11:57:14.563962" level="INFO">${verify} = ((4, 'alexandre'), (17, 'alexandre'), (16, 'alexandre'), (15, 'alexandre'), (14, 'alexandre'), (13, 'alexandre'))</msg>
 <var>${verify}</var>
 <arg>select * from person where name='alexandre'</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.487266" elapsed="0.002001"/>
+<status status="PASS" start="2026-02-17T11:57:14.562465" elapsed="0.001497"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-02-15T11:38:38.489267" level="INFO">Length is 4.</msg>
+<msg time="2026-02-17T11:57:14.563962" level="INFO">Length is 6.</msg>
 <arg>${verify}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.489267" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.563962" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.485256" elapsed="0.005698"/>
+<status status="PASS" start="2026-02-17T11:57:14.560465" elapsed="0.004581"/>
 </test>
 <kw name="Disconnect From Database" owner="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.491467" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:14.565980" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.147578" elapsed="0.343889"/>
+<status status="PASS" start="2026-02-17T11:57:12.676982" elapsed="1.889999"/>
 </suite>
 <suite id="s1-s5" name="DragAndDrop" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\DragAndDrop.robot">
-<test id="s1-s5-t1" name="To Perform Drag and Drop" line="9">
+<test id="s1-s5-t1" name="To Perform Drag and Drop" line="11">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:38.498601" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-02-17T11:57:14.573972" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:38.497558" elapsed="2.173472"/>
+<status status="PASS" start="2026-02-17T11:57:14.573972" elapsed="2.678405"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:40.671030" elapsed="0.038283"/>
+<status status="PASS" start="2026-02-17T11:57:17.253377" elapsed="0.028005"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.497558" elapsed="2.211755"/>
+<status status="PASS" start="2026-02-17T11:57:14.572972" elapsed="2.708410"/>
 </kw>
 <kw name="Drag And Drop" owner="SeleniumLibrary">
 <arg>id:draggable</arg>
-<arg>id:droppable</arg>
+<arg>id:draggable</arg>
 <doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2026-02-15T11:38:40.709313" elapsed="0.595143"/>
+<status status="PASS" start="2026-02-17T11:57:17.282378" elapsed="0.573669"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:38:49.305944" level="INFO">Slept 8 seconds.</msg>
-<arg>8</arg>
+<msg time="2026-02-17T11:57:22.856514" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:38:41.305471" elapsed="8.000473"/>
+<status status="PASS" start="2026-02-17T11:57:17.856047" elapsed="5.000467"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2026-02-17T11:57:22.858206" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_data\drag and drop.txt"&gt;C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_data\drag and drop.txt&lt;/a&gt;'.</msg>
+<msg time="2026-02-17T11:57:22.858206" level="INFO">${gt} = drag in drop me now !</msg>
+<var>${gt}</var>
+<arg>${document}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2026-02-17T11:57:22.857128" elapsed="0.001078"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${gt}</arg>
+<arg>drag in drop me now !</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-02-17T11:57:22.859139" elapsed="0.001086"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2026-02-17T11:57:22.861226" level="INFO">Sending C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_data\drag and drop.txt to browser.</msg>
+<arg>id=singleFileInput</arg>
+<arg>${document}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2026-02-17T11:57:22.860225" elapsed="0.046103"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-17T11:57:27.906716" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-17T11:57:22.906328" elapsed="5.000388"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:38:49.307050" elapsed="2.179677"/>
+<status status="PASS" start="2026-02-17T11:57:27.906716" elapsed="2.172784"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:38.497558" elapsed="12.990184"/>
+<status status="PASS" start="2026-02-17T11:57:14.572972" elapsed="15.507514"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:38.494013" elapsed="12.995291"/>
+<status status="PASS" start="2026-02-17T11:57:14.567980" elapsed="15.513496"/>
 </suite>
 <suite id="s1-s6" name="ForLoop" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\ForLoop.robot">
-<test id="s1-s6-t1" name="For Loop Execution in Robot" line="5">
+<test id="s1-s6-t1" name="For Loop Execution in Robot" line="7">
 <for flavor="IN RANGE">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.499099" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.092509" elapsed="0.000000"/>
 </kw>
 <var name="${i}">0</var>
-<status status="PASS" start="2026-02-15T11:38:51.499099" elapsed="0.001001"/>
+<status status="PASS" start="2026-02-17T11:57:30.092509" elapsed="0.000963"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.500100" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.093472" elapsed="0.000000"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2026-02-15T11:38:51.500100" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.093472" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.501099" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.093472" elapsed="0.001117"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2026-02-15T11:38:51.501099" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.093472" elapsed="0.001117"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.502098" elapsed="0.000998"/>
+<status status="PASS" start="2026-02-17T11:57:30.094589" elapsed="0.000000"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2026-02-15T11:38:51.502098" elapsed="0.001505"/>
+<status status="PASS" start="2026-02-17T11:57:30.094589" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.503603" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.094589" elapsed="0.000900"/>
 </kw>
 <var name="${i}">4</var>
-<status status="PASS" start="2026-02-15T11:38:51.503603" elapsed="0.001012"/>
+<status status="PASS" start="2026-02-17T11:57:30.094589" elapsed="0.000900"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.504615" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.095489" elapsed="0.000000"/>
 </kw>
 <var name="${i}">5</var>
-<status status="PASS" start="2026-02-15T11:38:51.504615" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.095489" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.505622" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.095489" elapsed="0.001169"/>
 </kw>
 <var name="${i}">6</var>
-<status status="PASS" start="2026-02-15T11:38:51.505622" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.095489" elapsed="0.001169"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.505622" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.096658" elapsed="0.000000"/>
 </kw>
 <var name="${i}">7</var>
-<status status="PASS" start="2026-02-15T11:38:51.505622" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.096658" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.506621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.096658" elapsed="0.001060"/>
 </kw>
 <var name="${i}">8</var>
-<status status="PASS" start="2026-02-15T11:38:51.506621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.096658" elapsed="0.001060"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.507621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.097718" elapsed="0.000000"/>
 </kw>
 <var name="${i}">9</var>
-<status status="PASS" start="2026-02-15T11:38:51.506621" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:30.097718" elapsed="0.000000"/>
 </iter>
 <var>${i}</var>
 <value>0</value>
 <value>10</value>
-<status status="PASS" start="2026-02-15T11:38:51.498100" elapsed="0.009521"/>
+<status status="PASS" start="2026-02-17T11:57:30.092509" elapsed="0.005209"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.497085" elapsed="0.010536"/>
+<status status="PASS" start="2026-02-17T11:57:30.091471" elapsed="0.007251"/>
 </test>
-<test id="s1-s6-t2" name="For Loop Execution" line="10">
+<test id="s1-s6-t2" name="For Loop Execution" line="12">
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${j}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.509621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.099655" elapsed="0.000999"/>
 </kw>
 <var name="${j}">1</var>
-<status status="PASS" start="2026-02-15T11:38:51.509621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.099655" elapsed="0.000999"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${j}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.509621" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:30.100654" elapsed="0.000000"/>
 </kw>
 <var name="${j}">2 3 4 5</var>
-<status status="PASS" start="2026-02-15T11:38:51.509621" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:30.100654" elapsed="0.000000"/>
 </iter>
 <var>${j}</var>
 <value>1</value>
 <value>2 3 4 5</value>
-<status status="PASS" start="2026-02-15T11:38:51.509621" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:30.099655" elapsed="0.000999"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.508621" elapsed="0.002000"/>
+<status status="PASS" start="2026-02-17T11:57:30.099655" elapsed="0.001901"/>
 </test>
-<test id="s1-s6-t3" name="List Execution" line="15">
+<test id="s1-s6-t3" name="List Execution" line="17">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-15T11:38:51.511621" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<msg time="2026-02-17T11:57:30.102787" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
 <var>@{items}</var>
 <arg>1</arg>
 <arg>2</arg>
@@ -590,144 +681,144 @@ usually they are tuples or tuple-like objects.</doc>
 <arg>4</arg>
 <arg>5</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.510621" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:30.101778" elapsed="0.001009"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${k}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.102787" elapsed="0.000000"/>
 </kw>
 <var name="${k}">1</var>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.102787" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${k}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.102787" elapsed="0.000996"/>
 </kw>
 <var name="${k}">2</var>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.102787" elapsed="0.000996"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${k}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.001505"/>
+<status status="PASS" start="2026-02-17T11:57:30.103783" elapsed="0.000000"/>
 </kw>
 <var name="${k}">3</var>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.001505"/>
+<status status="PASS" start="2026-02-17T11:57:30.103783" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${k}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.513126" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.103783" elapsed="0.001003"/>
 </kw>
 <var name="${k}">4</var>
-<status status="PASS" start="2026-02-15T11:38:51.513126" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.103783" elapsed="0.001003"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${k}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.513126" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.104786" elapsed="0.000000"/>
 </kw>
 <var name="${k}">5</var>
-<status status="PASS" start="2026-02-15T11:38:51.513126" elapsed="0.001005"/>
+<status status="PASS" start="2026-02-17T11:57:30.104786" elapsed="0.000000"/>
 </iter>
 <var>${k}</var>
 <value>@{items}</value>
-<status status="PASS" start="2026-02-15T11:38:51.511621" elapsed="0.002510"/>
+<status status="PASS" start="2026-02-17T11:57:30.102787" elapsed="0.001999"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.510621" elapsed="0.003510"/>
+<status status="PASS" start="2026-02-17T11:57:30.101778" elapsed="0.003008"/>
 </test>
-<test id="s1-s6-t4" name="For Execution Ways With String" line="21">
+<test id="s1-s6-t4" name="For Execution Ways With String" line="23">
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.515132" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.106783" elapsed="0.000000"/>
 </kw>
 <var name="${i}">Rahul</var>
-<status status="PASS" start="2026-02-15T11:38:51.515132" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.105786" elapsed="0.000997"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.515132" elapsed="0.001004"/>
+<status status="PASS" start="2026-02-17T11:57:30.106783" elapsed="0.000000"/>
 </kw>
 <var name="${i}">Rakesh</var>
-<status status="PASS" start="2026-02-15T11:38:51.515132" elapsed="0.001004"/>
+<status status="PASS" start="2026-02-17T11:57:30.106783" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.516136" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.107787" elapsed="0.000000"/>
 </kw>
 <var name="${i}">John</var>
-<status status="PASS" start="2026-02-15T11:38:51.516136" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.106783" elapsed="0.001004"/>
 </iter>
 <var>${i}</var>
 <value>Rahul</value>
 <value>Rakesh</value>
 <value>John</value>
-<status status="PASS" start="2026-02-15T11:38:51.514131" elapsed="0.002005"/>
+<status status="PASS" start="2026-02-17T11:57:30.105786" elapsed="0.002001"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.514131" elapsed="0.003005"/>
+<status status="PASS" start="2026-02-17T11:57:30.105786" elapsed="0.002996"/>
 </test>
-<test id="s1-s6-t5" name="For Execution Ways With String List" line="26">
+<test id="s1-s6-t5" name="For Execution Ways With String List" line="28">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-15T11:38:51.517136" level="INFO">@{nameList} = [ Rahul | Rakesh | John ]</msg>
+<msg time="2026-02-17T11:57:30.108782" level="INFO">@{nameList} = [ Rahul | Rakesh | John ]</msg>
 <var>@{nameList}</var>
 <arg>Rahul</arg>
 <arg>Rakesh</arg>
 <arg>John</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.517136" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.108782" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.518138" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.109787" elapsed="0.001007"/>
 </kw>
 <var name="${i}">Rahul</var>
-<status status="PASS" start="2026-02-15T11:38:51.518138" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.109787" elapsed="0.001007"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.518138" elapsed="0.001002"/>
+<status status="PASS" start="2026-02-17T11:57:30.110794" elapsed="0.000992"/>
 </kw>
 <var name="${i}">Rakesh</var>
-<status status="PASS" start="2026-02-15T11:38:51.518138" elapsed="0.001002"/>
+<status status="PASS" start="2026-02-17T11:57:30.110794" elapsed="0.000992"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.519140" elapsed="0.000998"/>
+<status status="PASS" start="2026-02-17T11:57:30.111786" elapsed="0.000000"/>
 </kw>
 <var name="${i}">John</var>
-<status status="PASS" start="2026-02-15T11:38:51.519140" elapsed="0.000998"/>
+<status status="PASS" start="2026-02-17T11:57:30.111786" elapsed="0.000000"/>
 </iter>
 <var>${i}</var>
 <value>@{nameList}</value>
-<status status="PASS" start="2026-02-15T11:38:51.518138" elapsed="0.002000"/>
+<status status="PASS" start="2026-02-17T11:57:30.109787" elapsed="0.001999"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.517136" elapsed="0.003002"/>
+<status status="PASS" start="2026-02-17T11:57:30.108782" elapsed="0.003004"/>
 </test>
-<test id="s1-s6-t6" name="For Loop with Exit" line="32">
+<test id="s1-s6-t6" name="For Loop with Exit" line="34">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2026-02-15T11:38:51.521138" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<msg time="2026-02-17T11:57:30.112785" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
 <var>@{items}</var>
 <arg>1</arg>
 <arg>2</arg>
@@ -735,572 +826,617 @@ usually they are tuples or tuple-like objects.</doc>
 <arg>4</arg>
 <arg>5</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.521138" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.112785" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.522137" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.000000"/>
 </kw>
 <kw name="Exit For Loop If" owner="BuiltIn">
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.523136" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.000000"/>
 </kw>
 <var name="${i}">1</var>
-<status status="PASS" start="2026-02-15T11:38:51.522137" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.523639" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.001002"/>
 </kw>
 <kw name="Exit For Loop If" owner="BuiltIn">
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.523639" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.114786" elapsed="0.000000"/>
 </kw>
 <var name="${i}">2</var>
-<status status="PASS" start="2026-02-15T11:38:51.523639" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.001002"/>
 </iter>
 <iter>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.523639" elapsed="0.001005"/>
+<status status="PASS" start="2026-02-17T11:57:30.114786" elapsed="0.000999"/>
 </kw>
 <kw name="Exit For Loop If" owner="BuiltIn">
-<msg time="2026-02-15T11:38:51.524644" level="INFO">Exiting for loop altogether.</msg>
+<msg time="2026-02-17T11:57:30.115785" level="INFO">Exiting for loop altogether.</msg>
 <arg>${i}==3</arg>
 <doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.524644" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.115785" elapsed="0.000000"/>
 </kw>
 <var name="${i}">3</var>
-<status status="PASS" start="2026-02-15T11:38:51.523639" elapsed="0.001005"/>
+<status status="PASS" start="2026-02-17T11:57:30.114786" elapsed="0.000999"/>
 </iter>
 <var>${i}</var>
 <value>@{items}</value>
-<status status="PASS" start="2026-02-15T11:38:51.522137" elapsed="0.002507"/>
+<status status="PASS" start="2026-02-17T11:57:30.113784" elapsed="0.002001"/>
 </for>
-<status status="PASS" start="2026-02-15T11:38:51.521138" elapsed="0.004511"/>
+<status status="PASS" start="2026-02-17T11:57:30.112785" elapsed="0.004002"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:51.491301" elapsed="0.034348"/>
+<test id="s1-s6-t7" name="For Andou Loop" line="42">
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-02-17T11:57:30.117785" level="INFO">Length is 5.</msg>
+<msg time="2026-02-17T11:57:30.117785" level="INFO">${myname} = 5</msg>
+<var>${myname}</var>
+<arg>andou</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-02-17T11:57:30.117785" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-02-17T11:57:30.117785" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${myname}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-02-17T11:57:30.117785" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-02-17T11:57:30.117785" level="INFO">@{items} = [ andou | peter | alexandra | michael ]</msg>
+<var>@{items}</var>
+<arg>andou</arg>
+<arg>peter</arg>
+<arg>alexandra</arg>
+<arg>michael</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-02-17T11:57:30.117785" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="List Should Contain Value" owner="Collections">
+<arg>${items}</arg>
+<arg>alexandra</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2026-02-17T11:57:30.118802" elapsed="0.000000"/>
+</kw>
+<var name="${andou}">['andou', 'peter', 'alexandra', 'michael']</var>
+<status status="PASS" start="2026-02-17T11:57:30.118802" elapsed="0.000000"/>
+</iter>
+<var>${andou}</var>
+<value>${items}</value>
+<status status="PASS" start="2026-02-17T11:57:30.117785" elapsed="0.001017"/>
+</for>
+<status status="PASS" start="2026-02-17T11:57:30.116787" elapsed="0.002015"/>
+</test>
+<status status="PASS" start="2026-02-17T11:57:30.082486" elapsed="0.037296"/>
 </suite>
 <suite id="s1-s7" name="GroupTest" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\GroupTest.robot">
 <test id="s1-s7-t1" name="TC1" line="2">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Home page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.529649" elapsed="0.001001"/>
+<status status="PASS" start="2026-02-17T11:57:30.122782" elapsed="0.000000"/>
 </kw>
 <tag>sanity</tag>
-<status status="PASS" start="2026-02-15T11:38:51.529649" elapsed="0.001001"/>
+<status status="PASS" start="2026-02-17T11:57:30.121810" elapsed="0.000972"/>
 </test>
 <test id="s1-s7-t2" name="TC2" line="5">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>About us</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.531650" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.123785" elapsed="0.000000"/>
 </kw>
 <tag>regression</tag>
-<status status="PASS" start="2026-02-15T11:38:51.531650" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.122782" elapsed="0.001003"/>
 </test>
 <test id="s1-s7-t3" name="TC3" line="8">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Contact Us</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.533155" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.123785" elapsed="0.000997"/>
 </kw>
 <tag>sanity</tag>
-<status status="PASS" start="2026-02-15T11:38:51.533155" elapsed="0.001005"/>
+<status status="PASS" start="2026-02-17T11:57:30.123785" elapsed="0.000997"/>
 </test>
 <test id="s1-s7-t4" name="TC4" line="11">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Profile</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.534160" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.124782" elapsed="0.000000"/>
 </kw>
 <tag>smoke</tag>
-<status status="PASS" start="2026-02-15T11:38:51.534160" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:30.124782" elapsed="0.000000"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:51.526649" elapsed="0.009016"/>
+<status status="PASS" start="2026-02-17T11:57:30.119782" elapsed="0.006005"/>
 </suite>
 <suite id="s1-s8" name="HandleBrowserWindows" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\HandleBrowserWindows.robot">
 <test id="s1-s8-t1" name="Handle Browser Windows" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:51.539669" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
+<msg time="2026-02-17T11:57:30.129784" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
 <arg>http://demo.automationtesting.in/Windows.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:51.539669" elapsed="2.519591"/>
+<status status="PASS" start="2026-02-17T11:57:30.129784" elapsed="2.770594"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:54.059260" elapsed="0.036578"/>
+<status status="PASS" start="2026-02-17T11:57:32.900378" elapsed="0.041656"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:38:56.097608" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-02-17T11:57:34.943278" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:38:54.095838" elapsed="2.001770"/>
+<status status="PASS" start="2026-02-17T11:57:32.942034" elapsed="2.001244"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:56.098631" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index'.</msg>
+<msg time="2026-02-17T11:57:34.944301" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index'.</msg>
 <arg>https://www.selenium.dev/selenium/docs/api/java/index</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:38:56.098631" elapsed="1.298030"/>
+<status status="PASS" start="2026-02-17T11:57:34.944301" elapsed="1.768047"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.396661" elapsed="0.031676"/>
+<status status="PASS" start="2026-02-17T11:57:36.712348" elapsed="0.029003"/>
 </kw>
 <kw name="Switch Browser" owner="SeleniumLibrary">
 <arg>1</arg>
 <doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.428337" elapsed="0.000999"/>
+<status status="PASS" start="2026-02-17T11:57:36.741351" elapsed="0.001000"/>
 </kw>
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:57.437391" level="INFO">${title} = Frames &amp; windows</msg>
+<msg time="2026-02-17T11:57:36.750348" level="INFO">${title} = Frames &amp; windows</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.429336" elapsed="0.008055"/>
+<status status="PASS" start="2026-02-17T11:57:36.742351" elapsed="0.007997"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${title}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.437391" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:36.751347" elapsed="0.000000"/>
 </kw>
 <kw name="Switch Browser" owner="SeleniumLibrary">
 <arg>2</arg>
 <doc>Switches between active browsers using ``index_or_alias``.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.438391" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:36.752346" elapsed="0.000000"/>
 </kw>
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:38:57.444541" level="INFO">${title} = Overview</msg>
+<msg time="2026-02-17T11:57:36.760348" level="INFO">${title} = Overview</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.438391" elapsed="0.006150"/>
+<status status="PASS" start="2026-02-17T11:57:36.753347" elapsed="0.007001"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${title}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.444541" elapsed="0.001015"/>
+<status status="PASS" start="2026-02-17T11:57:36.761371" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:38:59.446096" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-02-17T11:57:38.763416" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:38:57.445556" elapsed="2.000540"/>
+<status status="PASS" start="2026-02-17T11:57:36.762346" elapsed="2.001070"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:38:59.446096" elapsed="4.376963"/>
+<status status="PASS" start="2026-02-17T11:57:38.763416" elapsed="4.347584"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:38:51.539669" elapsed="12.283390"/>
+<status status="PASS" start="2026-02-17T11:57:30.129784" elapsed="12.982113"/>
 </test>
-<status status="PASS" start="2026-02-15T11:38:51.536671" elapsed="12.287400"/>
+<status status="PASS" start="2026-02-17T11:57:30.126786" elapsed="12.987111"/>
 </suite>
 <suite id="s1-s9" name="HandleTabbedWindows" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\HandleTabbedWindows.robot">
 <test id="s1-s9-t1" name="Handle Tabbed Windows" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:03.829070" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
+<msg time="2026-02-17T11:57:43.125903" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:03.829070" elapsed="6.858241"/>
+<status status="PASS" start="2026-02-17T11:57:43.124904" elapsed="2.821587"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:10.687311" elapsed="0.046634"/>
+<status status="PASS" start="2026-02-17T11:57:45.947490" elapsed="0.049371"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:03.828073" elapsed="6.905872"/>
+<status status="PASS" start="2026-02-17T11:57:43.124904" elapsed="2.871957"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:10.733945" level="INFO">Clicking element 'xpath=//p[@class="fc-button-label"]'.</msg>
+<msg time="2026-02-17T11:57:45.997870" level="INFO">Clicking element 'xpath=//p[@class="fc-button-label"]'.</msg>
 <arg>xpath=//p[@class="fc-button-label"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:10.733945" elapsed="0.137364"/>
+<status status="PASS" start="2026-02-17T11:57:45.997870" elapsed="0.155649"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:10.872885" level="INFO">Clicking element 'xpath://*[@id="Tabbed"]/a/button'.</msg>
+<msg time="2026-02-17T11:57:46.154517" level="INFO">Clicking element 'xpath://*[@id="Tabbed"]/a/button'.</msg>
 <arg>xpath://*[@id="Tabbed"]/a/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:10.872885" elapsed="0.194103"/>
+<status status="PASS" start="2026-02-17T11:57:46.153519" elapsed="0.110004"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:11.067998" level="INFO">Clicking element 'xpath=//button[@class="btn btn-info"]'.</msg>
+<msg time="2026-02-17T11:57:46.264517" level="INFO">Clicking element 'xpath=//button[@class="btn btn-info"]'.</msg>
 <arg>xpath=//button[@class="btn btn-info"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:11.067998" elapsed="0.117579"/>
+<status status="PASS" start="2026-02-17T11:57:46.264517" elapsed="0.380113"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:11.187082" elapsed="0.021234"/>
+<status status="PASS" start="2026-02-17T11:57:46.644630" elapsed="0.127090"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>xpath=//a[contains(@class, "selenium-button") and contains(text(), "Read more")]</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-02-15T11:39:11.209318" elapsed="0.818041"/>
+<status status="PASS" start="2026-02-17T11:57:46.771720" elapsed="0.346506"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:12.027359" level="INFO">Clicking element 'xpath=//a[contains(@class, "selenium-button") and contains(text(), "Read more")]'.</msg>
+<msg time="2026-02-17T11:57:47.119234" level="INFO">Clicking element 'xpath=//a[contains(@class, "selenium-button") and contains(text(), "Read more")]'.</msg>
 <arg>xpath=//a[contains(@class, "selenium-button") and contains(text(), "Read more")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:12.027359" elapsed="0.173441"/>
+<status status="PASS" start="2026-02-17T11:57:47.118226" elapsed="0.329366"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:12.201411" elapsed="2.114961"/>
+<status status="PASS" start="2026-02-17T11:57:47.447592" elapsed="2.142584"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:03.828073" elapsed="10.489264"/>
+<status status="PASS" start="2026-02-17T11:57:43.122983" elapsed="6.467193"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:03.824071" elapsed="10.494222"/>
+<status status="PASS" start="2026-02-17T11:57:43.115894" elapsed="6.475355"/>
 </suite>
 <suite id="s1-s10" name="HandleTable" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\HandleTable.robot">
 <test id="s1-s10-t1" name="Get All Links form Website" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:14.321684" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-02-17T11:57:49.601258" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:14.321684" elapsed="4.285918"/>
+<status status="PASS" start="2026-02-17T11:57:49.600193" elapsed="2.591763"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.607602" elapsed="0.041661"/>
+<status status="PASS" start="2026-02-17T11:57:52.191956" elapsed="0.036606"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:14.321684" elapsed="4.327579"/>
+<status status="PASS" start="2026-02-17T11:57:49.600193" elapsed="2.628369"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>xpath://table[@name='BookTable']</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.649263" elapsed="0.291686"/>
+<status status="PASS" start="2026-02-17T11:57:52.229568" elapsed="0.294273"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:18.950084" level="INFO">${rows} = 7</msg>
+<msg time="2026-02-17T11:57:52.542836" level="INFO">${rows} = 7</msg>
 <var>${rows}</var>
 <arg>xpath://table[@name='BookTable']/tbody/tr</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.941954" elapsed="0.008130"/>
+<status status="PASS" start="2026-02-17T11:57:52.524967" elapsed="0.017869"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.950084" elapsed="0.001000"/>
+<status status="PASS" start="2026-02-17T11:57:52.543914" elapsed="0.000000"/>
 </kw>
 <kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:18.961136" level="INFO">${cols} = 4</msg>
+<msg time="2026-02-17T11:57:52.584165" level="INFO">${cols} = 4</msg>
 <var>${cols}</var>
 <arg>xpath://table[@name='BookTable']/tbody/tr[1]/th</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.951084" elapsed="0.010052"/>
+<status status="PASS" start="2026-02-17T11:57:52.543914" elapsed="0.040251"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${cols}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.962144" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:52.585130" elapsed="0.001147"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:18.984725" level="INFO">${data} = Master In Selenium</msg>
+<msg time="2026-02-17T11:57:52.626292" level="INFO">${data} = Master In Selenium</msg>
 <var>${data}</var>
 <arg>xpath://table[@name='BookTable']/tbody/tr[5]/td[1]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.962144" elapsed="0.022581"/>
+<status status="PASS" start="2026-02-17T11:57:52.586277" elapsed="0.040015"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${data}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.985239" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:57:52.626292" elapsed="0.000000"/>
 </kw>
 <kw name="Table Column Should Contain" owner="SeleniumLibrary">
 <arg>xpath://table[@name='BookTable']</arg>
 <arg>2</arg>
 <arg>Author</arg>
 <doc>Verifies table column contains text ``expected``.</doc>
-<status status="PASS" start="2026-02-15T11:39:18.985239" elapsed="0.040869"/>
+<status status="PASS" start="2026-02-17T11:57:52.627289" elapsed="0.046568"/>
 </kw>
 <kw name="Table Row Should Contain" owner="SeleniumLibrary">
 <arg>xpath://table[@name='BookTable']</arg>
 <arg>4</arg>
 <arg>Learn JS</arg>
 <doc>Verifies that table row contains text ``expected``.</doc>
-<status status="PASS" start="2026-02-15T11:39:19.026108" elapsed="0.061040"/>
+<status status="PASS" start="2026-02-17T11:57:52.674851" elapsed="0.031029"/>
 </kw>
 <kw name="Table Cell Should Contain" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:19.139605" level="INFO">Table cell contains 'Mukesh'.</msg>
+<msg time="2026-02-17T11:57:52.761609" level="INFO">Table cell contains 'Mukesh'.</msg>
 <arg>xpath://table[@name='BookTable']</arg>
 <arg>5</arg>
 <arg>2</arg>
 <arg>Mukesh</arg>
 <doc>Verifies table cell contains text ``expected``.</doc>
-<status status="PASS" start="2026-02-15T11:39:19.087148" elapsed="0.052457"/>
+<status status="PASS" start="2026-02-17T11:57:52.706875" elapsed="0.054734"/>
 </kw>
 <kw name="Table Header Should Contain" owner="SeleniumLibrary">
 <arg>xpath://table[@name='BookTable']</arg>
 <arg>BookName</arg>
 <doc>Verifies table header contains text ``expected``.</doc>
-<status status="PASS" start="2026-02-15T11:39:19.139605" elapsed="0.029657"/>
+<status status="PASS" start="2026-02-17T11:57:52.761609" elapsed="0.029999"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:19.169262" elapsed="2.168389"/>
+<status status="PASS" start="2026-02-17T11:57:52.791608" elapsed="2.168815"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:14.321684" elapsed="7.015967"/>
+<status status="PASS" start="2026-02-17T11:57:49.599174" elapsed="5.361249"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:14.319293" elapsed="7.019366"/>
+<status status="PASS" start="2026-02-17T11:57:49.593171" elapsed="5.368251"/>
 </suite>
 <suite id="s1-s11" name="IFrameHandling" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\IFrameHandling.robot">
 <test id="s1-s11-t1" name="To Perform To handle IFrame" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:21.347266" level="INFO">Opening browser 'chrome' to base url 'https://seleniumhq.github.io/selenium/docs/api/java/index'.</msg>
+<msg time="2026-02-17T11:57:54.970424" level="INFO">Opening browser 'chrome' to base url 'https://seleniumhq.github.io/selenium/docs/api/java/index'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:21.347266" elapsed="1.418609"/>
+<status status="PASS" start="2026-02-17T11:57:54.970424" elapsed="1.507986"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:22.765875" elapsed="0.039204"/>
+<status status="PASS" start="2026-02-17T11:57:56.478410" elapsed="0.041341"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:21.347266" elapsed="1.458814"/>
+<status status="PASS" start="2026-02-17T11:57:54.970424" elapsed="1.549327"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:22.807080" level="INFO">Clicking link 'org.openqa.selenium.bidi.webextension'.</msg>
+<msg time="2026-02-17T11:57:56.520752" level="INFO">Clicking link 'org.openqa.selenium.bidi.webextension'.</msg>
 <arg>org.openqa.selenium.bidi.webextension</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:22.806080" elapsed="0.129893"/>
+<status status="PASS" start="2026-02-17T11:57:56.520752" elapsed="0.273336"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:39:23.936614" level="INFO">Slept 1 second.</msg>
+<msg time="2026-02-17T11:57:57.794887" level="INFO">Slept 1 second.</msg>
 <arg>1second</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:39:22.935973" elapsed="1.000641"/>
+<status status="PASS" start="2026-02-17T11:57:56.794088" elapsed="1.000799"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:23.937635" level="INFO">Clicking link 'ExtensionBase64Encoded'.</msg>
+<msg time="2026-02-17T11:57:57.795903" level="INFO">Clicking link 'ExtensionBase64Encoded'.</msg>
 <arg>ExtensionBase64Encoded</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:23.937635" elapsed="0.140517"/>
+<status status="PASS" start="2026-02-17T11:57:57.795903" elapsed="0.275945"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:39:25.079851" level="INFO">Slept 1 second.</msg>
+<msg time="2026-02-17T11:57:59.073298" level="INFO">Slept 1 second.</msg>
 <arg>1second</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:39:24.078152" elapsed="1.001699"/>
+<status status="PASS" start="2026-02-17T11:57:58.072847" elapsed="1.000451"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:25.080869" level="INFO">Clicking link 'xpath=//a[@class="member-name-link"]'.</msg>
+<msg time="2026-02-17T11:57:59.074092" level="INFO">Clicking link 'xpath=//a[@class="member-name-link"]'.</msg>
 <arg>xpath=//a[@class="member-name-link"]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:25.080869" elapsed="0.084202"/>
+<status status="PASS" start="2026-02-17T11:57:59.074092" elapsed="0.079020"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:25.165071" elapsed="2.143665"/>
+<status status="PASS" start="2026-02-17T11:57:59.153112" elapsed="2.143866"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:21.346208" elapsed="5.963534"/>
+<status status="PASS" start="2026-02-17T11:57:54.969429" elapsed="6.327549"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:21.340663" elapsed="5.971074"/>
+<status status="PASS" start="2026-02-17T11:57:54.964426" elapsed="6.333574"/>
 </suite>
 <suite id="s1-s12" name="MouseOperations" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\MouseOperations.robot">
 <test id="s1-s12-t1" name="To Perform Select Option with Drop Down list" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:27.321779" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-02-17T11:58:01.301736" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:27.321779" elapsed="2.827129"/>
+<status status="PASS" start="2026-02-17T11:58:01.301736" elapsed="2.598182"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:30.148908" elapsed="0.042647"/>
+<status status="PASS" start="2026-02-17T11:58:03.900918" elapsed="0.039001"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:27.321779" elapsed="2.869776"/>
+<status status="PASS" start="2026-02-17T11:58:01.301736" elapsed="2.638183"/>
 </kw>
 <kw name="Open Context Menu" owner="SeleniumLibrary">
 <arg>xpath://*[@id="HTML10"]/div[1]/button</arg>
 <doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:30.193602" elapsed="0.309722"/>
+<status status="PASS" start="2026-02-17T11:58:03.940918" elapsed="0.312225"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:39:35.505045" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-02-17T11:58:09.254465" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:39:30.503324" elapsed="5.001721"/>
+<status status="PASS" start="2026-02-17T11:58:04.253143" elapsed="5.001322"/>
 </kw>
 <kw name="Double Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:35.506070" level="INFO">Double clicking element 'xpath://*[@id="HTML10"]/div[1]/button'.</msg>
+<msg time="2026-02-17T11:58:09.256574" level="INFO">Double clicking element 'xpath://*[@id="HTML10"]/div[1]/button'.</msg>
 <arg>xpath://*[@id="HTML10"]/div[1]/button</arg>
 <doc>Double clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-15T11:39:35.506070" elapsed="0.295168"/>
+<status status="PASS" start="2026-02-17T11:58:09.255483" elapsed="0.292941"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:39:37.801806" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-02-17T11:58:11.550255" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:39:35.801238" elapsed="2.000568"/>
+<status status="PASS" start="2026-02-17T11:58:09.548424" elapsed="2.001831"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:37.803332" elapsed="2.173448"/>
+<status status="PASS" start="2026-02-17T11:58:11.550782" elapsed="2.197024"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:27.321779" elapsed="12.655001"/>
+<status status="PASS" start="2026-02-17T11:58:01.301736" elapsed="12.446977"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:27.313248" elapsed="12.665541"/>
+<status status="PASS" start="2026-02-17T11:58:01.299635" elapsed="12.451111"/>
 </suite>
 <suite id="s1-s13" name="ScreenShots" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\ScreenShots.robot">
 <test id="s1-s13-t1" name="TAKE SCREEN SHOT ON CURRENT PAGE" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:39.986904" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
+<msg time="2026-02-17T11:58:13.759129" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
 <arg>http://demo.automationtesting.in/Windows.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:39.986904" elapsed="2.517270"/>
+<status status="PASS" start="2026-02-17T11:58:13.759129" elapsed="2.637886"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:42.504174" elapsed="0.046650"/>
+<status status="PASS" start="2026-02-17T11:58:16.397015" elapsed="0.050000"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:42.629168" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demoatutomation_logo.png"&gt;&lt;img src="demoatutomation_logo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T11:58:16.520579" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demoatutomation_logo.png"&gt;&lt;img src="demoatutomation_logo.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>xpath://*[@id="header"]/div/div/div/div[1]/a/img</arg>
 <arg>demoatutomation_logo.png</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2026-02-15T11:39:42.551822" elapsed="0.077346"/>
+<status status="PASS" start="2026-02-17T11:58:16.447015" elapsed="0.073564"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:42.833799" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demoatutomation_home.png"&gt;&lt;img src="demoatutomation_home.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-17T11:58:16.763733" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="demoatutomation_home.png"&gt;&lt;img src="demoatutomation_home.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>demoatutomation_home.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-02-15T11:39:42.629168" elapsed="0.204631"/>
+<status status="PASS" start="2026-02-17T11:58:16.521578" elapsed="0.243160"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:42.833799" elapsed="2.125370"/>
+<status status="PASS" start="2026-02-17T11:58:16.764738" elapsed="2.193332"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:39.985583" elapsed="4.974589"/>
+<status status="PASS" start="2026-02-17T11:58:13.758020" elapsed="5.200050"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:39.981006" elapsed="4.981164"/>
+<status status="PASS" start="2026-02-17T11:58:13.752710" elapsed="5.206360"/>
 </suite>
 <suite id="s1-s14" name="ScrollingPage" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\ScrollingPage.robot">
 <test id="s1-s14-t1" name="Scrolling Page using JavaScript executor" line="9">
 <kw name="Lunch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:44.972225" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<msg time="2026-02-17T11:58:18.967166" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-15T11:39:44.971205" elapsed="2.190718"/>
+<status status="PASS" start="2026-02-17T11:58:18.967166" elapsed="2.602059"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-15T11:39:47.161923" elapsed="0.036494"/>
+<status status="PASS" start="2026-02-17T11:58:21.569225" elapsed="0.034560"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:44.971205" elapsed="2.227212"/>
+<status status="PASS" start="2026-02-17T11:58:18.966068" elapsed="2.637717"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2026-02-15T11:39:47.199418" level="INFO">Executing JavaScript:
+<msg time="2026-02-17T11:58:21.604783" level="INFO">Executing JavaScript:
 window.scroll(0,document.body.scrollHeight)
 Without any arguments.</msg>
 <arg>window.scroll(0,document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2026-02-15T11:39:47.198417" elapsed="0.010514"/>
+<status status="PASS" start="2026-02-17T11:58:21.603785" elapsed="0.009508"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-15T11:39:52.209423" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-02-17T11:58:26.615274" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-15T11:39:47.208931" elapsed="5.000492"/>
+<status status="PASS" start="2026-02-17T11:58:21.614348" elapsed="5.000926"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-02-15T11:39:52.209929" elapsed="2.297350"/>
+<status status="PASS" start="2026-02-17T11:58:26.616368" elapsed="2.201737"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:44.969828" elapsed="9.538458"/>
+<status status="PASS" start="2026-02-17T11:58:18.965072" elapsed="9.853033"/>
 </test>
-<status status="PASS" start="2026-02-15T11:39:44.964473" elapsed="9.544808"/>
+<status status="PASS" start="2026-02-17T11:58:18.961071" elapsed="9.858540"/>
 </suite>
 <suite id="s1-s15" name="SetupTearDown" source="C:\Users\GENIUS\IdeaProjects\robotframewoerkexemple1\test_cases\SetupTearDown.robot">
 <kw name="Log To Console" owner="BuiltIn" type="SETUP">
 <arg>Open Browser</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.519824" elapsed="0.001066"/>
+<status status="PASS" start="2026-02-17T11:58:28.823621" elapsed="0.000000"/>
 </kw>
 <test id="s1-s15-t1" name="TC1" line="13">
 <kw name="Log To Console" owner="BuiltIn" type="SETUP">
 <arg>Login</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.521891" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.823621" elapsed="0.001216"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Home page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.523409" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.824837" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
 <arg>logout</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.523409" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.824837" elapsed="0.001149"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:54.520890" elapsed="0.002519"/>
+<status status="PASS" start="2026-02-17T11:58:28.823621" elapsed="0.002365"/>
 </test>
 <test id="s1-s15-t2" name="TC2" line="15">
 <kw name="Log To Console" owner="BuiltIn" type="SETUP">
 <arg>Login</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.525972" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.826992" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>About us</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.526606" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.827995" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
 <arg>logout</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.527691" elapsed="0.000943"/>
+<status status="PASS" start="2026-02-17T11:58:28.827995" elapsed="0.001089"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:54.524915" elapsed="0.003719"/>
+<status status="PASS" start="2026-02-17T11:58:28.826992" elapsed="0.002092"/>
 </test>
 <test id="s1-s15-t3" name="TC3" line="17">
 <kw name="Log To Console" owner="BuiltIn" type="SETUP">
 <arg>Login</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.530624" elapsed="0.000992"/>
+<status status="PASS" start="2026-02-17T11:58:28.829990" elapsed="0.001012"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Contact Us</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.531616" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.831002" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
 <arg>logout</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.531616" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-17T11:58:28.831002" elapsed="0.000989"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:54.529622" elapsed="0.001994"/>
+<status status="PASS" start="2026-02-17T11:58:28.829990" elapsed="0.002001"/>
 </test>
 <kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
 <arg>Close Browser</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-02-15T11:39:54.531616" elapsed="0.001591"/>
+<status status="PASS" start="2026-02-17T11:58:28.831991" elapsed="0.001120"/>
 </kw>
-<status status="PASS" start="2026-02-15T11:39:54.511288" elapsed="0.021919"/>
+<status status="PASS" start="2026-02-17T11:58:28.819611" elapsed="0.013500"/>
 </suite>
-<status status="PASS" start="2026-02-15T11:38:21.975088" elapsed="92.559157"/>
+<status status="PASS" start="2026-02-17T11:56:54.772424" elapsed="94.061568"/>
 </suite>
 <statistics>
 <total>
-<stat pass="32" fail="0" skip="0">All Tests</stat>
+<stat pass="33" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">regression</stat>
@@ -1308,13 +1444,13 @@ Without any arguments.</msg>
 <stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Test Cases" id="s1" pass="32" fail="0" skip="0">Test Cases</stat>
+<stat name="Test Cases" id="s1" pass="33" fail="0" skip="0">Test Cases</stat>
 <stat name="AlertHandling" id="s1-s1" pass="1" fail="0" skip="0">Test Cases.AlertHandling</stat>
 <stat name="BrowserNavigation" id="s1-s2" pass="1" fail="0" skip="0">Test Cases.BrowserNavigation</stat>
 <stat name="CountOfLinksOnPage" id="s1-s3" pass="1" fail="0" skip="0">Test Cases.CountOfLinksOnPage</stat>
 <stat name="DatabaseTestingInRobot" id="s1-s4" pass="8" fail="0" skip="0">Test Cases.DatabaseTestingInRobot</stat>
 <stat name="DragAndDrop" id="s1-s5" pass="1" fail="0" skip="0">Test Cases.DragAndDrop</stat>
-<stat name="ForLoop" id="s1-s6" pass="6" fail="0" skip="0">Test Cases.ForLoop</stat>
+<stat name="ForLoop" id="s1-s6" pass="7" fail="0" skip="0">Test Cases.ForLoop</stat>
 <stat name="GroupTest" id="s1-s7" pass="4" fail="0" skip="0">Test Cases.GroupTest</stat>
 <stat name="HandleBrowserWindows" id="s1-s8" pass="1" fail="0" skip="0">Test Cases.HandleBrowserWindows</stat>
 <stat name="HandleTabbedWindows" id="s1-s9" pass="1" fail="0" skip="0">Test Cases.HandleTabbedWindows</stat>
@@ -1327,9 +1463,9 @@ Without any arguments.</msg>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-02-15T11:38:38.453892" level="WARN">Keyword 'DatabaseLibrary.Row Count Is 0' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+<msg time="2026-02-17T11:57:14.517753" level="WARN">Keyword 'DatabaseLibrary.Row Count Is 0' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</msg>
-<msg time="2026-02-15T11:38:38.457898" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Equal To X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
+<msg time="2026-02-17T11:57:14.524814" level="WARN">Keyword 'DatabaseLibrary.Row Count Is Equal To X' is deprecated. Use new `Check Row Count` keyword with assertion engine instead.
 The deprecated keyword will be removed in future versions.</msg>
 </errors>
 </robot>
